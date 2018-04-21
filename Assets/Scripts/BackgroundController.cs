@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BackgroundController : MonoBehaviour 
 {
-	public float scrollSpeed;
 	public float TileSizeY;
+	public Camera camera;
 
 	private Vector3 _startPosition;
 	
@@ -16,8 +16,11 @@ public class BackgroundController : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		float newPosition = Mathf.Repeat(Time.time * scrollSpeed, TileSizeY);
+	void Update ()
+	{
+		Vector2 cameraVelocity = camera.GetComponent<Rigidbody2D>().velocity;
+		float newPosition = Mathf.Repeat(Time.time * cameraVelocity.y, TileSizeY);
 		transform.position = _startPosition + Vector3.up * newPosition;
+		_startPosition = transform.position;
 	}
 }
