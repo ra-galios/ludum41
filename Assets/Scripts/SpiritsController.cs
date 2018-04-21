@@ -7,7 +7,8 @@ public class SpiritsController : MonoBehaviour
 	public GameObject Spirit;
 	public int StartAmount;
 	public float Radius;
-	public Text LooseText; 
+	public Text LooseText;
+	public Text SpiritsAmountText;
 
 	private int _spiritsAlive;
 	
@@ -25,12 +26,21 @@ public class SpiritsController : MonoBehaviour
 			spirit.SendMessage("Init", this);
 			
 		}
+		
+		updateSpiritsAmount();
+	}
+
+	private void updateSpiritsAmount()
+	{
+		SpiritsAmountText.text = _spiritsAlive.ToString() + " / " + StartAmount.ToString();
 	}
 
 	public void DecreaseSpiritsAmount()
 	{
 		_spiritsAlive--;
 
+			
+		updateSpiritsAmount();
 		if (_spiritsAlive < 1)
 		{
 			LooseText.gameObject.SetActive(true);
