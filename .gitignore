@@ -27,6 +27,7 @@ sysinfo.txt
 /*.unityproj
 /*.booproj
 .consulo/
+.idea/
 /*.tmp
 /*.svd
  
