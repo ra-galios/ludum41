@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4326675807828642}
   - component: {fileID: 2569400266070740312}
   m_Layer: 31
-  m_Name: Wall
+  m_Name: WallTileMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
