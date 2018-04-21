@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BackgroundController : MonoBehaviour 
 {
 	public float TileSizeY;
-	public Camera camera;
+	public Camera Camera;
 
 	private Vector3 _startPosition;
 	
@@ -18,8 +16,8 @@ public class BackgroundController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		Vector2 cameraVelocity = camera.GetComponent<Rigidbody2D>().velocity;
-		float newPosition = Mathf.Repeat(Time.time * cameraVelocity.y, TileSizeY);
+		var cameraVelocity = Camera.GetComponent<Rigidbody2D>().velocity;
+		var newPosition = Mathf.Repeat(Time.time * cameraVelocity.y, TileSizeY);
 		transform.position = _startPosition + Vector3.up * newPosition;
 		_startPosition = transform.position;
 	}
