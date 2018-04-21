@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224363254367661136}
   - component: {fileID: 114938197682261018}
+  - component: {fileID: 68647229310175858}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -27,6 +28,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!68 &68647229310175858
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1873716569908184}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -5.7166905, y: -2.868418}
+  - {x: 5.0891776, y: -2.793845}
 --- !u!114 &114938197682261018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -38,17 +56,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01372f648e50b4eb5b49c6941bd5bf5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameController: {fileID: 0}
   Spirit: {fileID: 1876972601747894, guid: 4a214f742da6444f59ce8242a9e63b55, type: 2}
-  Amount: 10
+  StartAmount: 10
   Radius: 1
+  LooseText: {fileID: 0}
 --- !u!224 &224363254367661136
 RectTransform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1873716569908184}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
