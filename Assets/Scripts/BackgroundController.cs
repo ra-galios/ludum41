@@ -6,7 +6,7 @@ public class BackgroundController : MonoBehaviour
 	
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		GameObject otherGameObject = other.gameObject;
+		var otherGameObject = other.gameObject;
 		if (otherGameObject.CompareTag("Spirit"))
 		{
 			SceneControllerObject.SendMessage("GameWon");

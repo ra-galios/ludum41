@@ -33,7 +33,7 @@ public class SpiritsController : MonoBehaviour
 		UpdateSpiritsUiCounter();
 	}
 
-	void SetSpeed(float force)
+	private void SetSpeed(float force)
 	{
 		_force = force;
 		foreach (var spiritInstance in _spiritInstances)
