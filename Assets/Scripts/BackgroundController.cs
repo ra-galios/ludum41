@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 
-public class BackgroundController : MonoBehaviour 
-{	
-	void OnTriggerEnter2D(Collider2D other)
+public class BackgroundController : MonoBehaviour
+{
+	public GameObject SceneControllerObject;
+	
+	private void OnTriggerEnter2D(Collider2D other)
 	{
 		GameObject otherGameObject = other.gameObject;
-		if (gameObject.CompareTag("Camera"))
+		if (otherGameObject.CompareTag("Spirit"))
 		{
-			//Camera.
+			SceneControllerObject.SendMessage("GameWon");
 		}
 	}
 }

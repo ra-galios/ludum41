@@ -4,12 +4,11 @@ using UnityEngine.UI;
 
 public class SpiritsController : MonoBehaviour
 {
+	public GameObject SceneControllerObject;
 	public GameObject Spirit;
 	public int StartAmount;
 	public float Radius;
-	public Text LooseText;
 	public Text SpiritsAmountText;
-	
 	
 	private readonly List<GameObject> _spiritInstances = new List<GameObject>();
 	private float _force;
@@ -55,14 +54,24 @@ public class SpiritsController : MonoBehaviour
 			DecreaseSpiritsAmount();
 	}
 
+	private void OnDestroy()
+	{
+		List<GameObject> spirits = new List<GameObject>(_spiritInstances);
+		_spiritInstances.Clear();
+		foreach (var spirit in spirits)
+		{
+			Destroy(spirit);
+		}
+	}
+
 	private void DecreaseSpiritsAmount()
 	{
 		_spiritsAlive--;
 
 		UpdateSpiritsUiCounter();
-		if (_spiritsAlive < 1 && !LooseText.IsDestroyed())
+		if (_spiritsAlive < 1)
 		{
-			LooseText.gameObject.SetActive(true);
+			SceneControllerObject.SendMessage("GameLost");			
 		}
 	}
 }
