@@ -38432,8 +38432,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -7.0737185, y: 249.49141}
-  - {x: 5.7672453, y: 249.53142}
+  - {x: -16.107435, y: 201.23814}
+  - {x: 12.377276, y: 200.61717}
 --- !u!81 &81372576677149158
 AudioListener:
   m_ObjectHideFlags: 1
