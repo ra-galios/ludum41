@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 212844316452113960}
   - component: {fileID: 95807906366695700}
   m_Layer: 10
-  m_Name: block_trap_off
+  m_Name: block_trap_off 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
