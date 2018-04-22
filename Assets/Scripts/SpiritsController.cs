@@ -11,7 +11,7 @@ public class SpiritsController : MonoBehaviour
 	public Text SpiritsAmountText;
 	
 	
-	private List<GameObject> _spiritInstances = new List<GameObject>();
+	private readonly List<GameObject> _spiritInstances = new List<GameObject>();
 	private float _force;
 	private int _spiritsAlive;
 	
@@ -31,19 +31,19 @@ public class SpiritsController : MonoBehaviour
 		}
 		
 		SetSpeed(_force);
-		updateSpiritsUICounter();
+		UpdateSpiritsUiCounter();
 	}
 
 	void SetSpeed(float force)
 	{
 		_force = force;
-		foreach (GameObject spiritInstance in _spiritInstances)
+		foreach (var spiritInstance in _spiritInstances)
 		{
 			spiritInstance.GetComponent<Rigidbody2D>().GetComponent<ConstantForce2D>().force = new Vector2(0, force);
 		}
 	}
 
-	private void updateSpiritsUICounter()
+	private void UpdateSpiritsUiCounter()
 	{
 		if(!SpiritsAmountText.IsDestroyed())
 			SpiritsAmountText.text = _spiritsAlive.ToString() + " / " + StartAmount.ToString();
@@ -59,7 +59,7 @@ public class SpiritsController : MonoBehaviour
 	{
 		_spiritsAlive--;
 
-		updateSpiritsUICounter();
+		UpdateSpiritsUiCounter();
 		if (_spiritsAlive < 1 && !LooseText.IsDestroyed())
 		{
 			LooseText.gameObject.SetActive(true);

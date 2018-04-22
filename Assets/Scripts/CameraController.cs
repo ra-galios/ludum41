@@ -18,12 +18,12 @@ public class CameraController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
-        Vector2 currentVelocity = rigidbody2D.velocity;
+        Rigidbody2D localRigidbody2D = GetComponent<Rigidbody2D>();
+        Vector2 currentVelocity = localRigidbody2D.velocity;
         if (currentVelocity.y > _cameraMaxSpeed)
         {
             currentVelocity.y = _cameraMaxSpeed;
-            rigidbody2D.velocity = currentVelocity;
+            localRigidbody2D.velocity = currentVelocity;
         }
     }
 
