@@ -38630,7 +38630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01372f648e50b4eb5b49c6941bd5bf5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneControllerObject: {fileID: 0}
+  SceneControllerObject: {fileID: 1713460395879260}
   Spirit: {fileID: 1876972601747894, guid: 4a214f742da6444f59ce8242a9e63b55, type: 2}
   StartAmount: 10
   Radius: 1

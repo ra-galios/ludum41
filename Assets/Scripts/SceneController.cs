@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
@@ -9,7 +9,6 @@ public class SceneController : MonoBehaviour
 	public float Speed;
 	public Text LooserMessage;
 	public Text CongratulationsMessage;
-	public Scene nextScene;
 
 	// Use this for initialization
 	private void Start ()
