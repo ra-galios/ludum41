@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4033721359696566}
   - component: {fileID: 212967667749215862}
-  - component: {fileID: 95586362763727336}
+  - component: {fileID: 114042774591207746}
   m_Layer: 10
   m_Name: block_trap_mech_off
   m_TagString: Untagged
@@ -37,13 +37,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4380291518987082}
   - component: {fileID: 212454348428425426}
+  - component: {fileID: 70857546130782260}
   m_Layer: 10
   m_Name: block_trap_mech_on
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4033721359696566
 Transform:
   m_ObjectHideFlags: 1
@@ -65,29 +66,39 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1797632984033940}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.503, z: 0}
+  m_LocalPosition: {x: 0, y: 0.22774, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4033721359696566}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95586362763727336
-Animator:
-  serializedVersion: 3
+--- !u!70 &70857546130782260
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1797632984033940}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.18}
+  m_Size: {x: 0.14, y: 0.49}
+  m_Direction: 0
+--- !u!114 &114042774591207746
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1648871625688894}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9bde45a92bb600c48b91df4012ada0a3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c01f9fb79644b0da447356a8caf640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0.5
 --- !u!212 &212454348428425426
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -38453,6 +38453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Wind: {fileID: 1751809515932350, guid: 29c67fdb2a9e7454fbe02a7d6e08e106, type: 2}
+  particle: {fileID: 1770816073754800, guid: 6c2fee429c25a4cdcb007ebf0026d2c3, type: 2}
 --- !u!114 &114171257032404738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -38859,7 +38860,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.005004883}
+  m_AnchoredPosition: {x: 0, y: -0.0048828125}
   m_SizeDelta: {x: 130.6, y: 56.8}
   m_Pivot: {x: 1, y: 1}
 --- !u!224 &224167858928912238
