@@ -1,15 +1,18 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class SpiritsController : MonoBehaviour
 {
-	public MonoBehaviour GameController;
 	public GameObject Spirit;
 	public int StartAmount;
 	public float Radius;
 	public Text LooseText;
 	public Text SpiritsAmountText;
-
+	
+	
+	private List<GameObject> _spiritInstances = new List<GameObject>();
+	private float _force;
 	private int _spiritsAlive;
 	
 	// Use this for initialization
@@ -23,35 +26,43 @@ public class SpiritsController : MonoBehaviour
 			Vector3 pos = new Vector3(position.x + Random.Range(-Radius, Radius), 
 				position.y + Random.Range(-Radius, Radius), 0);
 			GameObject spirit = Instantiate(Spirit, pos, Quaternion.identity);
+			_spiritInstances.Add(spirit);
 			spirit.SendMessage("Init", this);
-			
 		}
 		
-		updateSpiritsAmount();
+		SetSpeed(_force);
+		updateSpiritsUICounter();
 	}
 
-	private void updateSpiritsAmount()
+	void SetSpeed(float force)
 	{
-		SpiritsAmountText.text = _spiritsAlive.ToString() + " / " + StartAmount.ToString();
+		_force = force;
+		foreach (GameObject spiritInstance in _spiritInstances)
+		{
+			spiritInstance.GetComponent<Rigidbody2D>().GetComponent<ConstantForce2D>().force = new Vector2(0, force);
+		}
 	}
 
-	public void DecreaseSpiritsAmount()
+	private void updateSpiritsUICounter()
+	{
+		if(!SpiritsAmountText.IsDestroyed())
+			SpiritsAmountText.text = _spiritsAlive.ToString() + " / " + StartAmount.ToString();
+	}
+
+	public void SpiritDestoyed(GameObject spirit)
+	{
+		if(_spiritInstances.Remove(spirit))
+			DecreaseSpiritsAmount();
+	}
+
+	private void DecreaseSpiritsAmount()
 	{
 		_spiritsAlive--;
 
-			
-		updateSpiritsAmount();
-		if (_spiritsAlive < 1)
+		updateSpiritsUICounter();
+		if (_spiritsAlive < 1 && !LooseText.IsDestroyed())
 		{
 			LooseText.gameObject.SetActive(true);
-		}
-	}
-
-	private void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.gameObject.CompareTag("Spirit"))
-		{
-			Destroy(other.gameObject);
 		}
 	}
 }

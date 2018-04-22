@@ -13,7 +13,7 @@ public class SpiritController : MonoBehaviour
     {
         if (_spiritsController != null)
         {
-            _spiritsController.DecreaseSpiritsAmount();
+            _spiritsController.SpiritDestoyed(gameObject);
         }
     }
 }

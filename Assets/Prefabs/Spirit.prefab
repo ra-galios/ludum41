@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50640291366088766}
   - component: {fileID: 61638651979506124}
   - component: {fileID: 114235001364797250}
+  - component: {fileID: 247809354542699948}
   m_Layer: 8
   m_Name: Spirit
   m_TagString: Spirit
@@ -57,7 +58,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 1
   m_AngularDrag: 0
-  m_GravityScale: -0.5
+  m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 8c65e5de4a741451885974b0456f3165, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -143,3 +144,13 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!247 &247809354542699948
+ConstantForce2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1876972601747894}
+  m_Enabled: 1
+  m_Force: {x: 0, y: 0}
+  m_RelativeForce: {x: 0, y: 0}
+  m_Torque: 0
