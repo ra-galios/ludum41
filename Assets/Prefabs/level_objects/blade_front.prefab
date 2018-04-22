@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212222472040403654}
   - component: {fileID: 60421814892216402}
   - component: {fileID: 114804940828522698}
+  - component: {fileID: 50308919333246624}
   m_Layer: 10
   m_Name: blade_big
   m_TagString: Untagged
@@ -52,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1189960636008930}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.19807172, y: 397.64252, z: 0}
+  m_LocalPosition: {x: 1.7146367, y: 1.3696287, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4305136393314564}
@@ -72,6 +73,26 @@ Transform:
   m_Father: {fileID: 4117504575305126}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50308919333246624
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1052257289764288}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 3
 --- !u!60 &60421814892216402
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -303,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67717b25e503d406a8f9cc2d8e28f3a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotationSpeed: 0
+  RotationSpeed: 180
 --- !u!212 &212222472040403654
 SpriteRenderer:
   m_ObjectHideFlags: 1
