@@ -262,8 +262,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1713460395879260}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9710732, y: 493.446, z: 2.3427436}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.9710732, y: 355, z: 2.3427436}
+  m_LocalScale: {x: 1, y: 1.000047, z: 1}
   m_Children:
   - {fileID: 224247477753970000}
   - {fileID: 4706286170929784}
@@ -280,7 +280,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1086535141949416}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 6.744, y: 250, z: 0}
+  m_LocalPosition: {x: 3.268, y: 250, z: 0}
   m_LocalScale: {x: 1.0000005, y: 1.0000005, z: 1}
   m_Children: []
   m_Father: {fileID: 4582025010002596}
@@ -293,8 +293,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1812539639529768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -500, z: -5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -506.6, z: -5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4740141927075026}
   - {fileID: 4378561702876112}
@@ -308,7 +308,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1435746196410000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.9710732, y: -246.89601, z: -2.3427436}
+  m_LocalPosition: {x: 2.9710732, y: -250.9, z: -2.3427436}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4284541403111276}
@@ -334,7 +334,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1715033123759784}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.83, y: 250, z: 0}
+  m_LocalPosition: {x: -0.282, y: 250, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4582025010002596}
@@ -349,7 +349,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -461,8 +461,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -5.807251, y: -4.0996094}
-  - {x: 5.498911, y: -4.177643}
+  - {x: -5.807251, y: -4.589752}
+  - {x: 5.547926, y: -4.5452576}
 --- !u!68 &68252276657044754
 EdgeCollider2D:
   m_ObjectHideFlags: 1
@@ -514,8 +514,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -20.712753, y: -165.77217}
-  - {x: 18.553722, y: -165.86284}
+  - {x: -20.936428, y: -177.96237}
+  - {x: 17.547192, y: -177.9412}
 --- !u!81 &81372576677149158
 AudioListener:
   m_ObjectHideFlags: 1
@@ -641,9 +641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Camera: {fileID: 20993634315120724}
   SpiritsControllerObject: {fileID: 1958311025108650}
-  Speed: 1.5
-  LooserMessage: {fileID: 114962153370065076}
-  CongratulationsMessage: {fileID: 114849104899992726}
+  Speed: 1
 --- !u!114 &114530470766729016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1029,7 +1027,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.0048828125}
+  m_AnchoredPosition: {x: -7, y: -0.0048828125}
   m_SizeDelta: {x: 130.6, y: 56.8}
   m_Pivot: {x: 1, y: 1}
 --- !u!224 &224167858928912238
