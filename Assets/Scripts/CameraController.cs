@@ -13,7 +13,7 @@ public class CameraController : MonoBehaviour
         pos = Camera.main.ScreenToWorldPoint(pos);
         pos.z = 0;
         Instantiate(Wind, pos, Quaternion.identity);
-        pos.z = -5;
+        pos.z = -20;
     }
 
     private void FixedUpdate()
