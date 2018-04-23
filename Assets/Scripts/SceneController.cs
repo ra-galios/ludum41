@@ -8,10 +8,6 @@ public class SceneController : MonoBehaviour
 	public Camera Camera;
     public GameObject SpiritsControllerObject;
 	public float Speed;
-	public Text LooserMessage;
-	public Text CongratulationsMessage;
-	public String NextScene;
-	public Scene Scene;
 	
 	// Use this for initialization
 	private void Start ()
@@ -31,26 +27,12 @@ public class SceneController : MonoBehaviour
 	void GameLost()
 	{
 		LevelFinished();
-	    LooserMessage.gameObject.SetActive(true);
+		SceneManager.LoadScene("FailScene");
 	}
 
 	void GameWon()
 	{
 		LevelFinished();
-		CongratulationsMessage.gameObject.SetActive(true);
-		nextScene();
-	}
-
-	public void Restart()
-	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-	}
-	
-	private void nextScene()
-	{
-		if (!string.IsNullOrEmpty(NextScene))
-		{
-			SceneManager.LoadScene(NextScene);
-		}
+		SceneManager.LoadScene("Success");	
 	}
 }
