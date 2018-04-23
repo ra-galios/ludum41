@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4165840961911500}
   - component: {fileID: 212702596504443732}
   - component: {fileID: 60964815602347030}
+  - component: {fileID: 114134194697691384}
   m_Layer: 10
   m_Name: block_wood_spike_middle
   m_TagString: Untagged
@@ -183,6 +184,18 @@ PolygonCollider2D:
       - {x: 0.227758, y: -0.227758}
       - {x: 0.227758, y: 0.20462634}
       - {x: 0.22508897, y: 0.20373665}
+--- !u!114 &114134194697691384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1795650055213058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67717b25e503d406a8f9cc2d8e28f3a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotationSpeed: 0
 --- !u!212 &212702596504443732
 SpriteRenderer:
   m_ObjectHideFlags: 1

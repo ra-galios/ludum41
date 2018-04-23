@@ -37,7 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4564269673759314}
   - component: {fileID: 212844316452113960}
-  - component: {fileID: 95807906366695700}
+  - component: {fileID: 114798696106189824}
   m_Layer: 10
   m_Name: block_trap_off 1
   m_TagString: Untagged
@@ -65,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1961924687528034}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8314954, y: 399.30118, z: 0}
+  m_LocalPosition: {x: -0.82040715, y: 4.2841654, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4109913795474640}
@@ -87,23 +87,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0.01, y: 0.17}
   m_Size: {x: 0.12, y: 0.52}
   m_Direction: 0
---- !u!95 &95807906366695700
-Animator:
-  serializedVersion: 3
+--- !u!114 &114798696106189824
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1961924687528034}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9bde45a92bb600c48b91df4012ada0a3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c01f9fb79644b0da447356a8caf640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0.3
 --- !u!212 &212844316452113960
 SpriteRenderer:
   m_ObjectHideFlags: 1
