@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4109913795474640}
   - component: {fileID: 212877642638159884}
   - component: {fileID: 70058605359943980}
+  - component: {fileID: 114821413037371324}
   m_Layer: 10
   m_Name: block_trap_on
   m_TagString: Untagged
@@ -125,6 +126,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Delay: 0.3
+--- !u!114 &114821413037371324
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683783750092788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb007784b5214e9caf35e54ef5e2a99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212844316452113960
 SpriteRenderer:
   m_ObjectHideFlags: 1
