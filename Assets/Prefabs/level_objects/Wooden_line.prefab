@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4044310240033950}
   - component: {fileID: 212492975056934922}
   - component: {fileID: 60487803442882790}
-  - component: {fileID: 114878869001020206}
+  - component: {fileID: 114789263006616262}
   m_Layer: 10
   m_Name: block_wood_spike_middle
   m_TagString: Untagged
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 4030649751322902}
   - component: {fileID: 212814517762332524}
   - component: {fileID: 60887883760714688}
-  - component: {fileID: 114320543328143306}
+  - component: {fileID: 114506963896331518}
   m_Layer: 10
   m_Name: block_wood_spike_middle (1)
   m_TagString: Untagged
@@ -154,9 +154,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1806789160953570}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5990008, y: -0.027605947, z: 0.37173438}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.86, y: -125.66999, z: 0.37173438}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4044310240033950}
   - {fileID: 4259052024815160}
@@ -164,7 +164,7 @@ Transform:
   - {fileID: 4510431389647842}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!60 &60487803442882790
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -499,7 +499,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.455516, y: 0.455516}
   m_EdgeRadius: 0
---- !u!114 &114320543328143306
+--- !u!114 &114506963896331518
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -507,11 +507,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1986218217007126}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67717b25e503d406a8f9cc2d8e28f3a2, type: 3}
+  m_Script: {fileID: 11500000, guid: ebb007784b5214e9caf35e54ef5e2a99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotationSpeed: 0
---- !u!114 &114878869001020206
+--- !u!114 &114789263006616262
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -519,10 +518,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1476666392142300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67717b25e503d406a8f9cc2d8e28f3a2, type: 3}
+  m_Script: {fileID: 11500000, guid: ebb007784b5214e9caf35e54ef5e2a99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotationSpeed: 0
 --- !u!212 &212152110116760048
 SpriteRenderer:
   m_ObjectHideFlags: 1

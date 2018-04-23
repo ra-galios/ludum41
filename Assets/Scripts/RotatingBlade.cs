@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class RotatingBlade : MonoBehaviour
+public class RotatingBlade : DestroySpiritOnCollision
 {
 	public float RotationSpeed;
 	
@@ -8,12 +8,5 @@ public class RotatingBlade : MonoBehaviour
 	void Start ()
 	{
 		GetComponent<Rigidbody2D>().angularVelocity = RotationSpeed;
-	}
-
-	void OnCollisionEnter2D(Collision2D other)
-	{
-		GameObject otherObj = other.gameObject;
-		if(otherObj.CompareTag("Spirit"))
-			Destroy(otherObj);
 	}
 }
