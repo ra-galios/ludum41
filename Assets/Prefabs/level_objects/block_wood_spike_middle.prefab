@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4165840961911500}
   - component: {fileID: 212702596504443732}
   - component: {fileID: 60964815602347030}
-  - component: {fileID: 114134194697691384}
+  - component: {fileID: 114802861891312726}
   m_Layer: 10
   m_Name: block_wood_spike_middle
   m_TagString: Untagged
@@ -35,13 +35,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1795650055213058}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.20438814, y: 401.0449, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 2.667, y: -101.81, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!60 &60964815602347030
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -184,7 +184,7 @@ PolygonCollider2D:
       - {x: 0.227758, y: -0.227758}
       - {x: 0.227758, y: 0.20462634}
       - {x: 0.22508897, y: 0.20373665}
---- !u!114 &114134194697691384
+--- !u!114 &114802861891312726
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -192,10 +192,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1795650055213058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67717b25e503d406a8f9cc2d8e28f3a2, type: 3}
+  m_Script: {fileID: 11500000, guid: ebb007784b5214e9caf35e54ef5e2a99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotationSpeed: 0
 --- !u!212 &212702596504443732
 SpriteRenderer:
   m_ObjectHideFlags: 1

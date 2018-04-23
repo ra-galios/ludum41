@@ -7,7 +7,5 @@ public class DestroySpiritOnCollision : MonoBehaviour
 		GameObject otherObj = other.gameObject;
 		if(otherObj.CompareTag("Spirit"))
 			Destroy(otherObj);
-			
-        throw new System.NotImplementedException();
     }
 }
