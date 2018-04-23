@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SceneController : MonoBehaviour
@@ -8,7 +10,9 @@ public class SceneController : MonoBehaviour
 	public float Speed;
 	public Text LooserMessage;
 	public Text CongratulationsMessage;
-
+	public String NextScene;
+	public Scene Scene;
+	
 	// Use this for initialization
 	private void Start ()
 	{
@@ -34,5 +38,19 @@ public class SceneController : MonoBehaviour
 	{
 		LevelFinished();
 		CongratulationsMessage.gameObject.SetActive(true);
+		nextScene();
+	}
+
+	public void Restart()
+	{
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+	}
+	
+	private void nextScene()
+	{
+		if (!string.IsNullOrEmpty(NextScene))
+		{
+			SceneManager.LoadScene(NextScene);
+		}
 	}
 }
