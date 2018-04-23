@@ -12,6 +12,7 @@ public class CameraController : MonoBehaviour
         var pos = Input.mousePosition;
         pos = Camera.main.ScreenToWorldPoint(pos);
         pos.z = 0;
+        pos.y += 0.2f;
         Instantiate(Wind, pos, Quaternion.identity);
         pos.z = -20;
     }

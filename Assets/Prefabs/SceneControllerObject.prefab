@@ -534,7 +534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d997c8a4e11040208424fd6568362ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Wind: {fileID: 1751809515932350, guid: 29c67fdb2a9e7454fbe02a7d6e08e106, type: 2}
+  Wind: {fileID: 100000, guid: a5070b77ccafb14408797b4c415c7114, type: 2}
 --- !u!114 &114171257032404738
 MonoBehaviour:
   m_ObjectHideFlags: 1

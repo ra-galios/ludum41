@@ -1,9 +1,18 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class SelfDestroy : MonoBehaviour
 {
-	// Update is called once per frame
-	private void Update () {
-		Destroy(gameObject);		
+	public float Delay;
+
+	void Start()
+	{
+		StartCoroutine(DestroyCoroutine());
+	}
+
+	private IEnumerator DestroyCoroutine()
+	{
+		yield return new WaitForSeconds(Delay);
+		Destroy(gameObject);
 	}
 }
