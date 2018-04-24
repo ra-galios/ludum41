@@ -1,17 +1,18 @@
-﻿using System;
+﻿using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class SceneController : MonoBehaviour
 {
 	public Camera Camera;
     public GameObject SpiritsControllerObject;
+	public GameObject RestartView;
 	public float Speed;
 	
 	// Use this for initialization
 	private void Start ()
 	{
+		Data.CurrentLevel = SceneManager.GetActiveScene().buildIndex;
 		// ReSharper disable once HeapView.BoxingAllocation
 		SpiritsControllerObject.SendMessage("SetSpeed", Speed);
 		// ReSharper disable once HeapView.BoxingAllocation

@@ -1,22 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class RestartGame: MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-	
+public class RestartGame: MonoBehaviour
+{
 	public void Restart()
 	{
-		SceneManager.LoadScene("TestScene_halina_lastday");	
+		SceneManager.LoadScene(Data.CurrentLevel);	
 	}
 }

@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Dialog2Controller : MonoBehaviour
-{
+{	
 	public Text RepliqueField;
 	public Text Button1Text;
 	public Text Button2Text;
@@ -31,41 +32,37 @@ public class Dialog2Controller : MonoBehaviour
 
 	public void btn1click()
 	{
-		btn2.SetActive(false);
-		if (_replique == 1)
+		switch (_replique)
 		{
-			btn1.SetActive(false);
-			RepliqueField.text = "Woman: You’re rude and shallow. Leave me alone!! \n to be continued...";
+			case 1:
+				btn2.SetActive(false);
+				btn1.SetActive(false);
+				RepliqueField.text = "Woman: You’re rude and shallow. Leave me alone!!";
+				btn3.SetActive(true);
+				break;
+			case 2:
+				btn2.SetActive(false);
+				RepliqueField.text = "Woman: No more questions, Stranger. More souls are awaiting your help!";
+				btn1.SetActive(false);
+				btn3.SetActive(true);
+				break;
 		}
-		else if(_replique == 2)
-		{
-			RepliqueField.text = "Woman: No more questions, Stranger. More souls are awaiting your help \n to be contined...";
-			btn1.SetActive(false);
-		}
-		
-		btn3.SetActive(true);
-		_replique++;
 	}
 
 	public void btn2Click()
 	{
+		_replique = 2;
 		madam1.SetActive(false);
 		madam2.SetActive(true);
-		btn1.SetActive(false);
+		Button1Text.text = "Are you...";
 		btn2.SetActive(false);
 		RepliqueField.text =
 			"Woman: You must know, Stranger, that the Death’s a guest who’s visit’s never wholly celebrated.";
-		btn3.SetActive(true);
 	}
 
 	public void btn3Click()
 	{
-		SceneManager.LoadScene("GameStart");
-	}
-
-	private void startGame()
-	{
-		SceneManager.LoadScene("TestScene_halina_lastday");
+		SceneManager.LoadScene("TestScene_halina_lastday_2");
 	}
 	
 	// Update is called once per frame
