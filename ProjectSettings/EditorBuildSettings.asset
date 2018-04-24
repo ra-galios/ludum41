@@ -12,14 +12,20 @@ EditorBuildSettings:
     path: Assets/Scene/TestScene_halina_lastday.unity
     guid: 1b2732b23cc8be24184e2a2b08b43742
   - enabled: 1
-    path: Assets/Scene/FailScene.unity
-    guid: acd92f9f82d25495bb826e2042713249
+    path: Assets/Scene/Success.unity
+    guid: 242e4d9ecff914dd693731791b20857f
   - enabled: 1
     path: Assets/Scene/TestScene_halina_lastday_2.unity
     guid: 2e707d2356fbd3649968777c014b48d9
   - enabled: 1
+    path: Assets/Scene/Success 1.unity
+    guid: 832940ebcca404d3ab885c78bf6291c6
+  - enabled: 1
     path: Assets/Scene/TestScene_halina_lastday_3.unity
     guid: bb5c2947a429a964e926d4a144fadf50
   - enabled: 1
-    path: Assets/Scene/Success.unity
-    guid: 242e4d9ecff914dd693731791b20857f
+    path: Assets/Scene/Success 2.unity
+    guid: cf120c4f513d04e198433efa163982ce
+  - enabled: 1
+    path: Assets/Scene/FailScene.unity
+    guid: acd92f9f82d25495bb826e2042713249

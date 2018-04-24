@@ -1,4 +1,5 @@
-﻿using DefaultNamespace;
+﻿using System;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,7 +7,7 @@ public class SceneController : MonoBehaviour
 {
 	public Camera Camera;
     public GameObject SpiritsControllerObject;
-	public GameObject RestartView;
+	public String SuccessScene;
 	public float Speed;
 	
 	// Use this for initialization
@@ -34,6 +35,6 @@ public class SceneController : MonoBehaviour
 	void GameWon()
 	{
 		LevelFinished();
-		SceneManager.LoadScene("Success");	
+		SceneManager.LoadScene(SuccessScene);	
 	}
 }

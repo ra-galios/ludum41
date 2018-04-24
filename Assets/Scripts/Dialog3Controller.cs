@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Dialog2Controller : MonoBehaviour
+public class Dialog3Controller : MonoBehaviour
 {	
 	public Text RepliqueField;
 	public Text Button1Text;
@@ -21,9 +21,9 @@ public class Dialog2Controller : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		RepliqueField.text = "Your fair guest is here again… You step towards the woman";
-		Button1Text.text = "Your eyes are beautiful!";
-		Button2Text.text = "May I ask, my lady, how you ended up here in this unholy place?";
+		RepliqueField.text = "The woman appears in front of you again";
+		Button1Text.text = "My lady, why these Spirits are doomed to this torture?";
+		Button2Text.text = "Mademoiselle, your posterior is magnificent!";
 	}
 
 	public void Next()
@@ -36,16 +36,17 @@ public class Dialog2Controller : MonoBehaviour
 		switch (_replique)
 		{
 			case 1:
+				_replique = 2;
 				sad.SetActive(false);
-				andgry.SetActive(true);
+				happy.SetActive(true);
+				Button1Text.text = "Next";
 				btn2.SetActive(false);
-				btn1.SetActive(false);
-				RepliqueField.text = "Woman: You’re rude and shallow. Leave me alone!!";
-				btn3.SetActive(true);
+				RepliqueField.text =
+					"Woman: You must know, Stranger, that the Death’s a guest who’s visit’s never wholly celebrated.";
 				break;
 			case 2:
 				btn2.SetActive(false);
-				RepliqueField.text = "Woman: No more questions, Stranger. More souls are awaiting your help!";
+				RepliqueField.text = "Woman: I can only offer you the gratitude of the souls whose sorrows are unimaginable!";
 				btn1.SetActive(false);
 				btn3.SetActive(true);
 				break;
@@ -54,18 +55,17 @@ public class Dialog2Controller : MonoBehaviour
 
 	public void btn2Click()
 	{
-		_replique = 2;
 		sad.SetActive(false);
-		happy.SetActive(true);
-		Button1Text.text = "Are you...";
+		andgry.SetActive(true);
 		btn2.SetActive(false);
-		RepliqueField.text =
-			"Woman: You must know, Stranger, that the Death’s a guest who’s visit’s never wholly celebrated.";
+		btn1.SetActive(false);
+		RepliqueField.text = "Woman: You are disgusting";
+		btn3.SetActive(true);
 	}
 
 	public void btn3Click()
 	{
-		SceneManager.LoadScene("TestScene_halina_lastday_2");
+		SceneManager.LoadScene("TestScene_halina_lastday_3");
 	}
 	
 	// Update is called once per frame
