@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,14 +14,13 @@ public class Dialog2Controller : MonoBehaviour
 	public GameObject btn1;
 	public GameObject btn3;
 	public GameObject sad;
-	public GameObject happy;
-	public GameObject andgry;
 
 	private int _replique = 1;
 	
 	// Use this for initialization
 	void Start ()
 	{
+		sad.GetComponent<Image>().sprite = Data.sad();
 		RepliqueField.text = "Your fair guest is here again… You step towards the woman";
 		Button1Text.text = "Your eyes are beautiful!";
 		Button2Text.text = "May I ask, my lady, how you ended up here in this unholy place?";
@@ -36,8 +36,7 @@ public class Dialog2Controller : MonoBehaviour
 		switch (_replique)
 		{
 			case 1:
-				sad.SetActive(false);
-				andgry.SetActive(true);
+				sad.GetComponent<Image>().sprite = Data.angry();
 				btn2.SetActive(false);
 				btn1.SetActive(false);
 				RepliqueField.text = "Woman: You’re rude and shallow. Leave me alone!!";
@@ -54,9 +53,9 @@ public class Dialog2Controller : MonoBehaviour
 
 	public void btn2Click()
 	{
+		sad.GetComponent<Image>().sprite = Data.happy();
+		Data.NextGirl();
 		_replique = 2;
-		sad.SetActive(false);
-		happy.SetActive(true);
 		Button1Text.text = "Are you...";
 		btn2.SetActive(false);
 		RepliqueField.text =

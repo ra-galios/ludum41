@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,14 +14,13 @@ public class Dialog3Controller : MonoBehaviour
 	public GameObject btn1;
 	public GameObject btn3;
 	public GameObject sad;
-	public GameObject happy;
-	public GameObject andgry;
 
 	private int _replique = 1;
 	
 	// Use this for initialization
 	void Start ()
 	{
+		sad.GetComponent<Image>().sprite = Data.sad();
 		RepliqueField.text = "The woman appears in front of you again";
 		Button1Text.text = "My lady, why these Spirits are doomed to this torture?";
 		Button2Text.text = "Mademoiselle, your posterior is magnificent!";
@@ -37,8 +37,7 @@ public class Dialog3Controller : MonoBehaviour
 		{
 			case 1:
 				_replique = 2;
-				sad.SetActive(false);
-				happy.SetActive(true);
+				sad.GetComponent<Image>().sprite = Data.happy();
 				Button1Text.text = "Next";
 				btn2.SetActive(false);
 				RepliqueField.text =
@@ -55,8 +54,7 @@ public class Dialog3Controller : MonoBehaviour
 
 	public void btn2Click()
 	{
-		sad.SetActive(false);
-		andgry.SetActive(true);
+		sad.GetComponent<Image>().sprite = Data.angry();
 		btn2.SetActive(false);
 		btn1.SetActive(false);
 		RepliqueField.text = "Woman: You are disgusting";

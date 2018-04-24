@@ -1,4 +1,5 @@
 ﻿using System;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,6 +10,9 @@ public class DiaologController : MonoBehaviour
 	public Text ButtonText;
 
 	private int _replique = -1;
+
+	public Sprite[] girl11;
+	
 	
 	private string[][] _dialogs = new string[][]
 	{
@@ -21,6 +25,10 @@ public class DiaologController : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		Data.CurrentLevel = 0;
+		Data.currGirl = -1;
+		Data.allGirls = girl11;
+		Data.NextGirl();
 		Next();
 	}
 
