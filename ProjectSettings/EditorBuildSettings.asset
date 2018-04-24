@@ -15,5 +15,11 @@ EditorBuildSettings:
     path: Assets/Scene/FailScene.unity
     guid: acd92f9f82d25495bb826e2042713249
   - enabled: 1
+    path: Assets/Scene/TestScene_halina_lastday_2.unity
+    guid: 2e707d2356fbd3649968777c014b48d9
+  - enabled: 1
+    path: Assets/Scene/TestScene_halina_lastday_3.unity
+    guid: bb5c2947a429a964e926d4a144fadf50
+  - enabled: 1
     path: Assets/Scene/Success.unity
     guid: 242e4d9ecff914dd693731791b20857f
